@@ -2246,7 +2246,7 @@
 .item1{transform:rotate(0deg) translateX(230px);}
 .item2{transform:rotate(60deg) translateX(230px);}
 .item3{transform:rotate(120deg) translateX(230px);}
-.item4{transform:rotate(180deg) translateX(230px);}
+.item4{transform:rotate(180deg) translateX(250px);}
 .item5{transform:rotate(240deg) translateX(230px);}
 .item6{transform:rotate(300deg) translateX(230px);}
 
@@ -3090,6 +3090,59 @@
 .shape{
 
     display:none;
+
+}
+
+}
+
+@media (max-width:768px){
+
+.orbit-wrapper{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    width:100%;
+
+    margin:0 auto;
+
+}
+
+.orbit-circle{
+
+    position:relative;
+
+    margin:0 auto;
+
+    left:0;
+
+    right:0;
+
+}
+
+.center-orbit{
+
+    left:50%;
+    top:140px;
+
+    transform:translateX(-50%);
+
+}
+.item4{
+
+    margin-left:-15px;
+
+}
+
+}
+@media(max-width:768px){
+
+.orbit-wrapper{
+
+    margin-bottom:70px;
 
 }
 

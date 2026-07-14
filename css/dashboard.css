@@ -388,10 +388,13 @@ input{
 /*=========================================
         MOBILE MENU BUTTON
 =========================================*/
+/*=====================================
+        MOBILE TOGGLE FIX
+=====================================*/
 
 .menu-toggle{
 
-    width:52px;
+    width:52px !important;
     height:52px;
 
     display:none;
@@ -1511,6 +1514,10 @@ white-space:nowrap;
 font-size:24px;
 
 }
+.menu-toggle{
+    width:92px;
+    height: 42px;
+}
 
 }
 
@@ -2246,6 +2253,30 @@ font-size:14px;
 display:block;
 overflow-x:auto;
 white-space:nowrap;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.recent-item{
+
+    gap:12px;
+
+}
+
+.recent-item img{
+
+    width:60px;
+
+    height:60px;
+
+    min-width:60px;
+
+    border-radius:50%;
+
+    object-fit:cover;
 
 }
 

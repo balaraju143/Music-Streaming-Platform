@@ -551,7 +551,6 @@ document.addEventListener("DOMContentLoaded", () => {
 /*=========================================================
             NEWSLETTER SUBSCRIBE
 =========================================================*/
-
 document.addEventListener("DOMContentLoaded", function () {
 
     const form = document.getElementById("newsletterForm");
@@ -560,6 +559,21 @@ document.addEventListener("DOMContentLoaded", function () {
     const subscribeMessage = document.getElementById("subscribeMessage");
 
     if (!form) return;
+
+    /*==============================
+            REMOVE ERROR
+    ==============================*/
+
+    email.addEventListener("input", function () {
+
+        emailError.textContent = "";
+        subscribeMessage.textContent = "";
+
+    });
+
+    /*==============================
+            FORM SUBMIT
+    ==============================*/
 
     form.addEventListener("submit", function (e) {
 
@@ -610,16 +624,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
         form.reset();
 
-    });
+        setTimeout(function () {
 
-    /*==============================
-            REMOVE ERROR
-    ==============================*/
+            subscribeMessage.textContent = "";
 
-    email.addEventListener("input", function () {
-
-        emailError.textContent = "";
-        subscribeMessage.textContent = "";
+        }, 3000);
 
     });
 

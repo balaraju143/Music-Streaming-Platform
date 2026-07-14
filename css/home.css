@@ -3965,7 +3965,7 @@ padding:25px;
 
 .world-content .hero-btn{
 
-    margin-top:40px;
+    margin-top:60px;
 
     display:inline-flex;
 
@@ -4676,3 +4676,16 @@ padding:25px;
 
 }
 
+a i{
+
+    margin-left:8px;
+
+    transition:.3s ease;
+
+}
+
+a:hover i{
+
+    transform:translateX(6px);
+
+}

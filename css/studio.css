@@ -3808,3 +3808,69 @@
 }
 
 }
+
+
+/*=====================================
+        STUDIO STATS HOVER
+=====================================*/
+
+.studio-stats div{
+
+    transition:.35s ease;
+
+    cursor:pointer;
+
+}
+
+.studio-stats div:hover{
+
+    transform:translateY(-10px);
+
+    background:rgba(255,122,0,.12);
+
+    border-color:#ff7a00;
+
+    box-shadow:0 20px 40px rgba(255,122,0,.25);
+
+}
+
+.studio-stats div:hover h3{
+
+    color:#ff7a00;
+
+}
+
+.studio-stats div:hover span{
+
+    color:#fff;
+
+}
+
+.room-overlay{
+
+
+    z-index:10;
+
+}
+
+.room-btn{
+
+    position:relative;
+
+    z-index:20;
+
+    pointer-events:auto;
+
+}
+@media (max-width:768px){
+
+.equipment-center h3,
+.equipment-center span{
+
+    left:0 !important;
+
+    text-align:center !important;
+
+}
+
+}

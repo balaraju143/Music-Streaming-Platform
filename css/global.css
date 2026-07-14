@@ -1074,7 +1074,7 @@ section{
 
     display:inline-block;
 
-    margin-bottom:30px;
+    margin-bottom:-30px;
 
 }
 
@@ -1245,6 +1245,25 @@ section{
     font-size:20px;
 
     transition:.35s;
+       padding:0;   
+
+}
+.footer-social a i{
+
+    margin:0;
+
+    line-height:1;
+
+}
+
+.footer-social a i{
+
+    width:20px;
+
+    text-align:center;
+    align-items: center;
+
+    display:inline-block;
 
 }
 

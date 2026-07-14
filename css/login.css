@@ -1062,3 +1062,27 @@ body{
 }
 
 }
+
+@media (max-width:768px){
+
+.register-text{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:5px;
+
+    white-space:nowrap;
+
+}
+
+.register-text a{
+
+    white-space:nowrap;
+
+}
+
+}
