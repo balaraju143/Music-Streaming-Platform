@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Music Artist Dashboard | Stackly</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<link rel="stylesheet" href="css/dashboard.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+<!--======================
+Overlay
+=======================-->
+
+<div class="sidebar-overlay"></div>
+
+<!--======================
+Sidebar
+=======================-->
+
+<aside class="sidebar">
+
+<div class="sidebar-top">
+
+<a href="index.html" class="logo">
+
+<img src="images/stackly-orange.webp" alt="Logo">
+
+</a>
+
+<button class="close-sidebar">
+
+<i class="fa-solid fa-xmark"></i>
+
+</button>
+
+</div>
+
+<!-- Artist -->
+
+<div class="artist-profile">
+
+<div class="artist-avatar">
+
+<img src="images/artist2.webp" alt="Artist">
+
+</div>
+
+<h3>Arjun Verma</h3>
+
+<p>Independent Music Artist</p>
+
+</div>
+
+<!-- Menu -->
+
+<ul class="sidebar-menu">
+
+<li class="active">
+
+<a href="artist-dashboard.html">
+
+<i class="fa-solid fa-house"></i>
+
+<span>Dashboard</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="404.html">
+
+<i class="fa-solid fa-music"></i>
+
+<span>My Songs</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="404.html">
+
+<i class="fa-solid fa-compact-disc"></i>
+
+<span>Albums</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="404.html">
+
+<i class="fa-solid fa-headphones"></i>
+
+<span>Playlists</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="404.html">
+
+<i class="fa-solid fa-video"></i>
+
+<span>Music Videos</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="404.html">
+
+<i class="fa-solid fa-chart-line"></i>
+
+<span>Streaming Analytics</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="404.html">
+
+<i class="fa-solid fa-wallet"></i>
+
+<span>Royalties</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="404.html">
+
+<i class="fa-solid fa-users"></i>
+
+<span>Fans</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="404.html">
+
+<i class="fa-solid fa-calendar-days"></i>
+
+<span>Concerts</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="404.html">
+
+<i class="fa-solid fa-envelope"></i>
+
+<span>Messages</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="404.html">
+
+<i class="fa-solid fa-gear"></i>
+
+<span>Settings</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="index.html">
+
+<i class="fa-solid fa-right-from-bracket"></i>
+
+<span>Logout</span>
+
+</a>
+
+</li>
+
+</ul>
+
+</aside>
+
+<!--======================
+Main Content
+=======================-->
+
+<main class="main-content">
+
+<!--======================
+Header
+=======================-->
+
+<header class="topbar">
+
+<div class="top-left">
+
+<button class="menu-toggle">
+
+<i class="fa-solid fa-bars"></i>
+
+</button>
+
+<div>
+
+<h1>Music Artist Dashboard</h1>
+<p>
+Welcome Back,
+<strong id="userEmail">
+guest@gmail.com
+</strong>
+🎵
+<br>
+<span id="currentDate"></span>
+</p>
+
+</div>
+
+</div>
+
+<div class="top-right">
+
+<div class="search-box">
+
+<input type="search" placeholder="Search songs, albums, playlists...">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+</div>
+
+<button class="icon-btn">
+
+<i class="fa-regular fa-bell"></i>
+
+<span>8</span>
+
+</button>
+
+<button class="icon-btn">
+
+<i class="fa-regular fa-envelope"></i>
+
+<span>5</span>
+
+</button>
+
+<div class="profile">
+
+<img src="images/artist4.webp" alt="Profile">
+
+</div>
+
+</div>
+
+</header>
+
+<!--======================
+Hero
+=======================-->
+
+<section class="hero">
+
+<div class="hero-left">
+
+<span class="tag">
+
+🎵 Verified Music Creator
+
+</span>
+
+<h2>
+
+Create Music.<br>
+
+Inspire Millions.
+
+</h2>
+
+<p>
+
+Upload new songs, manage albums, monitor streams,
+track royalties, schedule concerts and connect
+with fans from one premium music dashboard.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="404.html" class="btn-primary">
+
+<i class="fa-solid fa-cloud-arrow-up"></i>
+
+Upload Song
+
+</a>
+
+<a href="404.html" class="btn-outline">
+
+<i class="fa-solid fa-circle-play"></i>
+
+View Profile
+
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-right">
+
+<img src="images/vocal-studio (1).webp" alt="Music Dashboard">
+
+</div>
+
+</section>
+
+<!--======================
+Statistics
+=======================-->
+
+<section class="stats">
+
+<div class="stat-card">
+
+<div>
+
+<small>Total Songs</small>
+
+<h3>148</h3>
+
+<p>+6 New Releases</p>
+
+</div>
+
+<i class="fa-solid fa-music"></i>
+
+</div>
+
+<div class="stat-card">
+
+<div>
+
+<small>Total Streams</small>
+
+<h3>12.8M</h3>
+
+<p>+1.2M This Month</p>
+
+</div>
+
+<i class="fa-solid fa-headphones"></i>
+
+</div>
+
+<div class="stat-card">
+
+<div>
+
+<small>Followers</small>
+
+<h3>865K</h3>
+
+<p>+4,520 Today</p>
+
+</div>
+
+<i class="fa-solid fa-users"></i>
+
+</div>
+
+<div class="stat-card">
+
+<div>
+
+<small>Royalty Earnings</small>
+
+<h3>₹18.5L</h3>
+
+<p>Monthly Revenue</p>
+
+</div>
+
+<i class="fa-solid fa-wallet"></i>
+
+</div>
+
+</section>
+
+<!-- Continue From Dashboard Grid -->
+ <!--====================================
+        DASHBOARD GRID
+=====================================-->
+
+<section class="dashboard-grid">
+
+    <!-- Streaming Analytics -->
+
+    <div class="dashboard-card chart-card">
+
+        <div class="card-header">
+
+            <h3>Streaming Analytics</h3>
+
+            <a href="404.html">View Report</a>
+
+        </div>
+
+        <div class="chart-bars">
+
+            <div class="bar" style="height:170px;">
+                <span>Spotify</span>
+            </div>
+
+            <div class="bar" style="height:220px;">
+                <span>YouTube</span>
+            </div>
+
+            <div class="bar" style="height:150px;">
+                <span>Apple</span>
+            </div>
+
+            <div class="bar" style="height:200px;">
+                <span>JioSaavn</span>
+            </div>
+
+            <div class="bar" style="height:120px;">
+                <span>Gaana</span>
+            </div>
+
+            <div class="bar" style="height:180px;">
+                <span>Amazon</span>
+            </div>
+
+            <div class="bar" style="height:240px;">
+                <span>Others</span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Monthly Goal -->
+
+    <div class="dashboard-card">
+
+        <div class="card-header">
+
+            <h3>Monthly Goal</h3>
+
+        </div>
+
+        <div class="goal-box">
+
+            <h2>82%</h2>
+
+            <p>Streaming Target Completed</p>
+
+            <div class="progress">
+
+                <div class="progress-fill" style="width:82%;"></div>
+
+            </div>
+
+            <ul class="goal-list">
+
+                <li>
+
+                    <span>Target Streams</span>
+
+                    <strong>15 Million</strong>
+
+                </li>
+
+                <li>
+
+                    <span>Current Streams</span>
+
+                    <strong>12.3 Million</strong>
+
+                </li>
+
+                <li>
+
+                    <span>Remaining</span>
+
+                    <strong>2.7 Million</strong>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--====================================
+        TOP SONGS
+=====================================-->
+
+<section class="dashboard-grid">
+
+    <div class="dashboard-card">
+
+        <div class="card-header">
+
+            <h3>Top Performing Songs</h3>
+
+            <a href="404.html">View All</a>
+
+        </div>
+
+        <div class="recent-list">
+
+            <div class="recent-item">
+
+                <img src="images/music5.webp" alt="Song">
+
+                <div>
+
+                    <h4>Midnight Dreams</h4>
+
+                    <p>Released • July 2026</p>
+
+                </div>
+
+                <strong>3.6M</strong>
+
+            </div>
+
+            <div class="recent-item">
+
+                <img src="images/music1.webp" alt="Song">
+
+                <div>
+
+                    <h4>Lost In Love</h4>
+
+                    <p>Released • June 2026</p>
+
+                </div>
+
+                <strong>2.9M</strong>
+
+            </div>
+
+            <div class="recent-item">
+
+                <img src="images/music4.webp" alt="Song">
+
+                <div>
+
+                    <h4>Ocean Lights</h4>
+
+                    <p>Released • May 2026</p>
+
+                </div>
+
+                <strong>5.1M</strong>
+
+            </div>
+
+            <div class="recent-item">
+
+                <img src="images/music6.webp" alt="Song">
+
+                <div>
+
+                    <h4>Forever Mine</h4>
+
+                    <p>Released • April 2026</p>
+
+                </div>
+
+                <strong>7.8M</strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Platform Distribution -->
+
+    <div class="dashboard-card">
+
+        <div class="card-header">
+
+            <h3>Platform Distribution</h3>
+
+        </div>
+
+        <div class="platform-list">
+
+            <div class="platform-item">
+
+                <span>Spotify</span>
+
+                <strong>46%</strong>
+
+            </div>
+
+            <div class="platform-item">
+
+                <span>YouTube Music</span>
+
+                <strong>28%</strong>
+
+            </div>
+
+            <div class="platform-item">
+
+                <span>Apple Music</span>
+
+                <strong>12%</strong>
+
+            </div>
+
+            <div class="platform-item">
+
+                <span>JioSaavn</span>
+
+                <strong>8%</strong>
+
+            </div>
+
+            <div class="platform-item">
+
+                <span>Amazon Music</span>
+
+                <strong>6%</strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--====================================
+        LATEST ALBUMS
+=====================================-->
+
+<section class="dashboard-card">
+
+    <div class="card-header">
+
+        <h3>Latest Albums</h3>
+
+        <a href="404.html">View Albums</a>
+
+    </div>
+
+    <table class="orders-table">
+
+        <thead>
+
+            <tr>
+
+                <th>Album</th>
+
+                <th>Release Date</th>
+
+                <th>Status</th>
+
+                <th>Streams</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+
+                <td>Midnight Memories</td>
+
+                <td>10 Jul 2026</td>
+
+                <td><span class="success">Live</span></td>
+
+                <td>8.6M</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Forever You</td>
+
+                <td>18 Jun 2026</td>
+
+                <td><span class="success">Trending</span></td>
+
+                <td>5.2M</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Summer Nights</td>
+
+                <td>22 May 2026</td>
+
+                <td><span class="pending">Promoting</span></td>
+
+                <td>3.8M</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Broken Hearts</td>
+
+                <td>05 Apr 2026</td>
+
+                <td><span class="success">Popular</span></td>
+
+                <td>12.4M</td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</section>
+
+<!-- Continue with:
+1. Upcoming Concerts
+2. Fan Messages
+3. Notifications
+4. Footer
+5. Closing body/html tags -->
+<!--====================================
+        UPCOMING CONCERTS
+=====================================-->
+
+<section class="dashboard-grid">
+
+    <div class="dashboard-card">
+
+        <div class="card-header">
+
+            <h3>Upcoming Concerts</h3>
+
+            <a href="404.html">View Schedule</a>
+
+        </div>
+
+        <table class="orders-table">
+
+            <thead>
+
+                <tr>
+
+                    <th>Event</th>
+                    <th>City</th>
+                    <th>Date</th>
+                    <th>Status</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+
+                    <td>Summer Beats Tour</td>
+                    <td>Mumbai</td>
+                    <td>18 Jul 2026</td>
+                    <td><span class="success">Confirmed</span></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Live Music Night</td>
+                    <td>Hyderabad</td>
+                    <td>27 Jul 2026</td>
+                    <td><span class="pending">Upcoming</span></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Indie Music Fest</td>
+                    <td>Bengaluru</td>
+                    <td>08 Aug 2026</td>
+                    <td><span class="success">Confirmed</span></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Delhi Music Festival</td>
+                    <td>Delhi</td>
+                    <td>20 Aug 2026</td>
+                    <td><span class="pending">Planning</span></td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <!--=========================
+            TOP FANS
+    ==========================-->
+
+    <div class="dashboard-card">
+
+        <div class="card-header">
+
+            <h3>Top Fans</h3>
+
+        </div>
+
+        <div class="recent-list">
+
+            <div class="recent-item">
+
+                <img src="images/artist2.webp" alt="">
+
+                <div>
+
+                    <h4>Rahul Sharma</h4>
+
+                    <p>12,458 Minutes Listened</p>
+
+                </div>
+
+                ❤️
+
+            </div>
+
+            <div class="recent-item">
+
+                <img src="images/artist3.webp" alt="">
+
+                <div>
+
+                    <h4>Priya Patel</h4>
+
+                    <p>9,860 Minutes Listened</p>
+
+                </div>
+
+                ❤️
+
+            </div>
+
+            <div class="recent-item">
+
+                <img src="images/artist5.webp" alt="">
+
+                <div>
+
+                    <h4>David John</h4>
+
+                    <p>8,250 Minutes Listened</p>
+
+                </div>
+
+                ❤️
+
+            </div>
+
+            <div class="recent-item">
+
+                <img src="images/artist6 (1).webp" alt="">
+
+                <div>
+
+                    <h4>Anjali Singh</h4>
+
+                    <p>7,420 Minutes Listened</p>
+
+                </div>
+
+                ❤️
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--====================================
+        RECENT MESSAGES
+=====================================-->
+
+<section class="dashboard-grid">
+
+    <div class="dashboard-card">
+
+        <div class="card-header">
+
+            <h3>Recent Fan Messages</h3>
+
+            <a href="404.html">View All</a>
+
+        </div>
+
+        <div class="notification-list">
+
+            <div class="notification">
+
+                <i class="fa-solid fa-user"></i>
+
+                <div>
+
+                    <h4>Rahul Sharma</h4>
+
+                    <p>Your latest song is amazing! Waiting for the next release.</p>
+
+                </div>
+
+            </div>
+
+            <div class="notification">
+
+                <i class="fa-solid fa-user"></i>
+
+                <div>
+
+                    <h4>Priya Patel</h4>
+
+                    <p>Your concert in Hyderabad was unforgettable!</p>
+
+                </div>
+
+            </div>
+
+            <div class="notification">
+
+                <i class="fa-solid fa-user"></i>
+
+                <div>
+
+                    <h4>Arun Kumar</h4>
+
+                    <p>Love your new album. Keep creating beautiful music.</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--=========================
+        NOTIFICATIONS
+    ==========================-->
+
+    <div class="dashboard-card">
+
+        <div class="card-header">
+
+            <h3>Notifications</h3>
+
+        </div>
+
+        <div class="notification-list">
+
+            <div class="notification">
+
+                <i class="fa-solid fa-circle-play"></i>
+
+                <div>
+
+                    <h4>Song Trending</h4>
+
+                    <p>Your song <strong>"Midnight Dreams"</strong> reached #1 this week.</p>
+
+                </div>
+
+            </div>
+
+            <div class="notification">
+
+                <i class="fa-solid fa-wallet"></i>
+
+                <div>
+
+                    <h4>Royalty Received</h4>
+
+                    <p>₹2,45,000 royalty payment has been credited.</p>
+
+                </div>
+
+            </div>
+
+            <div class="notification">
+
+                <i class="fa-solid fa-users"></i>
+
+                <div>
+
+                    <h4>New Followers</h4>
+
+                    <p>You gained <strong>4,520</strong> followers today.</p>
+
+                </div>
+
+            </div>
+
+            <div class="notification">
+
+                <i class="fa-solid fa-ticket"></i>
+
+                <div>
+
+                    <h4>Concert Sold Out</h4>
+
+                    <p>Mumbai concert tickets are completely sold out.</p>
+
+                </div>
+
+            </div>
+
+            <div class="notification">
+
+                <i class="fa-solid fa-award"></i>
+
+                <div>
+
+                    <h4>Achievement Unlocked</h4>
+
+                    <p>Congratulations! You crossed <strong>100 Million</strong> total streams.</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--====================================
+        FOOTER
+=====================================-->
+
+<footer class="dashboard-footer">
+
+    <p>
+
+        © 2026 Stackly Music Platform. All Rights Reserved.
+
+    </p>
+
+</footer>
+
+</main>
+
+</div>
+
+<script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

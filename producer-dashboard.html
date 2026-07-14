@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Music Producer Dashboard | Stackly</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<link rel="stylesheet" href="css/dashboard.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+<!--======================
+Overlay
+=======================-->
+
+<div class="sidebar-overlay"></div>
+
+<!--======================
+Sidebar
+=======================-->
+
+<aside class="sidebar">
+
+<div class="sidebar-top">
+
+<a href="index.html" class="logo">
+
+<img src="images/stackly-orange.webp" alt="Logo">
+
+</a>
+
+<button class="close-sidebar">
+
+<i class="fa-solid fa-xmark"></i>
+
+</button>
+
+</div>
+
+<!-- Artist -->
+
+<div class="artist-profile">
+
+<div class="artist-avatar">
+
+<img src="images/artist1.webp" alt="Artist">
+
+</div>
+
+<h3>Arjun Verma</h3>
+
+<p>Independent Music Producer</p>
+
+</div>
+
+<!-- Menu -->
+
+<ul class="sidebar-menu">
+
+<li class="active">
+
+<a href="artist-dashboard.html">
+
+<i class="fa-solid fa-house"></i>
+
+<span>Dashboard</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="404.html">
+
+<i class="fa-solid fa-music"></i>
+
+<span>My Songs</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="404.html">
+
+<i class="fa-solid fa-compact-disc"></i>
+
+<span>Albums</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="404.html">
+
+<i class="fa-solid fa-headphones"></i>
+
+<span>Playlists</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="404.html">
+
+<i class="fa-solid fa-video"></i>
+
+<span>Music Videos</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="404.html">
+
+<i class="fa-solid fa-chart-line"></i>
+
+<span>Streaming Analytics</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="404.html">
+
+<i class="fa-solid fa-wallet"></i>
+
+<span>Royalties</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="404.html">
+
+<i class="fa-solid fa-users"></i>
+
+<span>Fans</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="404.html">
+
+<i class="fa-solid fa-calendar-days"></i>
+
+<span>Concerts</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="404.html">
+
+<i class="fa-solid fa-envelope"></i>
+
+<span>Messages</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="404.html">
+
+<i class="fa-solid fa-gear"></i>
+
+<span>Settings</span>
+
+</a>
+
+</li>
+
+<li>
+
+<a href="index.html">
+
+<i class="fa-solid fa-right-from-bracket"></i>
+
+<span>Logout</span>
+
+</a>
+
+</li>
+
+</ul>
+
+</aside>
+
+<!--======================
+Main Content
+=======================-->
+
+<main class="main-content">
+
+<!--======================
+Header
+=======================-->
+
+<header class="topbar">
+
+<div class="top-left">
+
+<button class="menu-toggle">
+
+<i class="fa-solid fa-bars"></i>
+
+</button>
+
+<div>
+
+<h1>Music Producer Dashboard</h1>
+<p>
+Welcome Back,
+<strong id="userEmail">
+guest@gmail.com
+</strong>
+🎵
+<br>
+<span id="currentDate"></span>
+</p>
+
+</div>
+
+</div>
+
+<div class="top-right">
+
+<div class="search-box">
+
+<input type="search" placeholder="Search songs, albums, playlists...">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+</div>
+
+<button class="icon-btn">
+
+<i class="fa-regular fa-bell"></i>
+
+<span>8</span>
+
+</button>
+
+<button class="icon-btn">
+
+<i class="fa-regular fa-envelope"></i>
+
+<span>5</span>
+
+</button>
+
+<div class="profile">
+
+<img src="images/artist1.webp" alt="Profile">
+
+</div>
+
+</div>
+
+</header>
+
+
+<!--=========================================
+        PRODUCER STUDIO OVERVIEW
+==========================================-->
+
+<section class="dashboard-grid">
+
+    <div class="dashboard-card">
+
+        <div class="card-header">
+
+            <h3>Studio Overview</h3>
+
+            <a href="404.html">View Studio</a>
+
+        </div>
+
+        <div class="stats">
+
+            <div class="stat-box">
+
+                <i class="fa-solid fa-microphone-lines"></i>
+
+                <h2>58</h2>
+
+                <p>Tracks Produced</p>
+
+            </div>
+
+            <div class="stat-box">
+
+                <i class="fa-solid fa-headphones"></i>
+
+                <h2>23</h2>
+
+                <p>Mixing Projects</p>
+
+            </div>
+
+            <div class="stat-box">
+
+                <i class="fa-solid fa-sliders"></i>
+
+                <h2>14</h2>
+
+                <p>Mastering Jobs</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="dashboard-card">
+
+        <div class="card-header">
+
+            <h3>Today's Studio</h3>
+
+        </div>
+
+        <img src="images/live-performance.webp" alt="Studio">
+
+    </div>
+
+</section>
+
+<!--=========================================
+        ACTIVE COLLABORATIONS
+==========================================-->
+
+<section class="dashboard-card">
+
+    <div class="card-header">
+
+        <h3>Active Collaborations</h3>
+
+        <a href="404.html">View All</a>
+
+    </div>
+
+    <div class="recent-list">
+
+        <div class="recent-item">
+
+            <img src="images/artist1.webp" alt="">
+
+            <div>
+
+                <h4>Arjun Verma</h4>
+
+                <p>Recording New Album</p>
+
+            </div>
+
+            <strong>80%</strong>
+
+        </div>
+
+        <div class="recent-item">
+
+            <img src="images/artist2.webp" alt="">
+
+            <div>
+
+                <h4>Neha Kapoor</h4>
+
+                <p>Mixing Session</p>
+
+            </div>
+
+            <strong>65%</strong>
+
+        </div>
+
+        <div class="recent-item">
+
+            <img src="images/artist3.webp" alt="">
+
+            <div>
+
+                <h4>DJ Alex</h4>
+
+                <p>EDM Production</p>
+
+            </div>
+
+            <strong>40%</strong>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--=========================================
+        PLUGINS & EQUIPMENT
+==========================================-->
+
+<section class="dashboard-grid">
+
+    <div class="dashboard-card">
+
+        <div class="card-header">
+
+            <h3>Studio Equipment</h3>
+
+        </div>
+
+        <ul class="goal-list">
+
+            <li>
+                <span>Audio Interface</span>
+                <strong>Online</strong>
+            </li>
+
+            <li>
+                <span>MIDI Keyboard</span>
+                <strong>Connected</strong>
+            </li>
+
+            <li>
+                <span>Studio Monitors</span>
+                <strong>Ready</strong>
+            </li>
+
+            <li>
+                <span>Microphones</span>
+                <strong>4 Active</strong>
+            </li>
+
+        </ul>
+
+    </div>
+
+    <div class="dashboard-card">
+
+        <div class="card-header">
+
+            <h3>Top Plugins</h3>
+
+        </div>
+
+        <div class="platform-list">
+
+            <div class="platform-item">
+
+                <span>Auto-Tune Pro</span>
+
+                <strong>96%</strong>
+
+            </div>
+
+            <div class="platform-item">
+
+                <span>FabFilter Pro-Q</span>
+
+                <strong>88%</strong>
+
+            </div>
+
+            <div class="platform-item">
+
+                <span>Kontakt</span>
+
+                <strong>81%</strong>
+
+            </div>
+
+            <div class="platform-item">
+
+                <span>Serum</span>
+
+                <strong>76%</strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--=========================================
+        PROJECT TIMELINE
+==========================================-->
+
+<section class="dashboard-card">
+
+    <div class="card-header">
+
+        <h3>Production Timeline</h3>
+
+        <a href="404.html">Full Timeline</a>
+
+    </div>
+
+    <table class="orders-table">
+
+        <thead>
+
+            <tr>
+
+                <th>Project</th>
+
+                <th>Artist</th>
+
+                <th>Deadline</th>
+
+                <th>Status</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+
+                <td>Echo Beats</td>
+
+                <td>Arjun</td>
+
+                <td>18 Jul</td>
+
+                <td><span class="success">Recording</span></td>
+
+            </tr>
+
+            <tr>
+
+                <td>Skyline</td>
+
+                <td>Neha</td>
+
+                <td>21 Jul</td>
+
+                <td><span class="pending">Mixing</span></td>
+
+            </tr>
+
+            <tr>
+
+                <td>Forever</td>
+
+                <td>DJ Alex</td>
+
+                <td>25 Jul</td>
+
+                <td><span class="success">Mastering</span></td>
+
+            </tr>
+
+            <tr>
+
+                <td>Moonlight</td>
+
+                <td>Riya</td>
+
+                <td>29 Jul</td>
+
+                <td><span class="pending">Editing</span></td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</section>
+
+
+<!--====================================
+        FOOTER
+=====================================-->
+
+<footer class="dashboard-footer">
+
+    <p>
+
+        © 2026 Stackly Music Platform. All Rights Reserved.
+
+    </p>
+
+</footer>
+
+</main>
+
+</div>
+
+<script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

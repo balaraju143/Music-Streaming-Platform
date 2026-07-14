@@ -1,0 +1,2252 @@
+/*=========================================
+        GOOGLE FONT
+=========================================*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/*=========================================
+        ROOT VARIABLES
+=========================================*/
+:root{
+
+    --primary:#0F4C5C;
+    --secondary:#F5F2EA;
+    --accent:#FF7A00;
+    --white:#ffffff;
+    --dark:#16222a;
+    --text:#5f6368;
+    --border:#e6e6e6;
+    --shadow:0 12px 35px rgba(0,0,0,.08);
+    --radius:18px;
+    --transition:.35s ease;
+
+}
+
+/*=========================================
+        RESET
+=========================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+    background:var(--secondary);
+    color:var(--dark);
+    overflow-x:hidden;
+
+}
+
+img{
+
+    max-width:100%;
+    display:block;
+
+}
+
+a{
+
+    text-decoration:none;
+
+}
+
+ul{
+
+    list-style:none;
+
+}
+
+button,
+input{
+
+    border:none;
+    outline:none;
+    font-family:inherit;
+
+}
+
+/*=========================================
+        DASHBOARD
+=========================================*/
+
+.dashboard{
+
+    display:flex;
+    min-height:100vh;
+
+}
+
+.main-content{
+
+    width:calc(100% - 300px);
+    margin-left:300px;
+    padding:35px;
+
+}
+
+/*=========================================
+        SIDEBAR
+=========================================*/
+
+.sidebar{
+
+    position:fixed;
+    top:0;
+    left:0;
+
+    width:300px;
+    height:100vh;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    overflow-y:auto;
+
+    z-index:1000;
+
+    transition:.4s;
+
+}
+
+.sidebar::-webkit-scrollbar{
+
+    width:6px;
+
+}
+
+.sidebar::-webkit-scrollbar-thumb{
+
+    background:rgba(255,255,255,.2);
+
+}
+
+/*=========================================
+        SIDEBAR TOP
+=========================================*/
+
+.sidebar-top{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:24px;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+.logo img{
+
+    width:170px;
+
+}
+
+.close-sidebar{
+
+    width:45px;
+    height:45px;
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    border-radius:12px;
+
+    background:rgba(255,255,255,.08);
+
+    color:#fff;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.close-sidebar:hover{
+
+    background:var(--accent);
+
+}
+
+/*=========================================
+        ARTIST PROFILE
+=========================================*/
+
+.artist-profile{
+
+    text-align:center;
+
+    padding:35px 20px;
+
+}
+
+.artist-avatar{
+
+    width:110px;
+    height:110px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    overflow:hidden;
+
+    border:5px solid rgba(255,255,255,.15);
+
+}
+
+.artist-avatar img{
+
+    width:100%;
+    height:100%;
+    object-fit:cover;
+
+}
+
+.artist-profile h3{
+
+    margin-top:20px;
+
+    font-size:24px;
+
+    font-weight:700;
+
+}
+
+.artist-profile p{
+
+    margin-top:8px;
+
+    color:#d9d9d9;
+
+    font-size:14px;
+
+}
+
+/*=========================================
+        SIDEBAR MENU
+=========================================*/
+
+.sidebar-menu{
+
+    padding:10px 18px 40px;
+
+}
+
+.sidebar-menu li{
+
+    margin-bottom:10px;
+
+}
+
+.sidebar-menu li a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    padding:16px 18px;
+
+    border-radius:14px;
+
+    color:#fff;
+
+    transition:.35s;
+
+    font-weight:500;
+
+}
+
+.sidebar-menu li a i{
+
+    width:24px;
+
+    text-align:center;
+
+    font-size:18px;
+
+}
+
+.sidebar-menu li:hover a{
+
+    background:rgba(255,255,255,.08);
+
+    transform:translateX(8px);
+
+}
+
+.sidebar-menu li.active a{
+
+    background:var(--accent);
+
+    color:#fff;
+
+    box-shadow:0 15px 30px rgba(255,122,0,.35);
+
+}
+
+/*=========================================
+        OVERLAY
+=========================================*/
+
+.sidebar-overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.3s;
+
+    z-index:999;
+
+}
+
+.sidebar-overlay.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+/*=========================================
+        HEADER
+=========================================*/
+
+.topbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:25px;
+
+    background:#fff;
+
+    padding:25px 30px;
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow);
+
+    margin-bottom:35px;
+
+}
+
+.top-left{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+.top-left h1{
+
+    font-size:32px;
+
+    color:var(--primary);
+
+}
+
+.top-left p{
+
+    margin-top:6px;
+
+    color:var(--text);
+
+}
+
+.top-left strong{
+
+    color:var(--accent);
+
+}
+
+/*=========================================
+        MOBILE MENU BUTTON
+=========================================*/
+
+.menu-toggle{
+
+    width:52px;
+    height:52px;
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    border-radius:12px;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.menu-toggle:hover{
+
+    background:var(--accent);
+
+}
+
+/*=========================================
+        HEADER RIGHT
+=========================================*/
+
+.top-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+.search-box{
+
+    position:relative;
+
+}
+
+.search-box input{
+
+    width:320px;
+
+    height:54px;
+
+    border:1px solid var(--border);
+
+    border-radius:50px;
+
+    padding:0 55px 0 22px;
+
+    background:#fafafa;
+
+}
+
+.search-box i{
+
+    position:absolute;
+
+    top:50%;
+    right:20px;
+
+    transform:translateY(-50%);
+
+    color:var(--primary);
+
+}
+
+.icon-btn{
+
+    width:52px;
+    height:52px;
+
+    border-radius:50%;
+
+    background:#fff;
+
+    box-shadow:var(--shadow);
+
+    cursor:pointer;
+
+    position:relative;
+
+    transition:.3s;
+
+}
+
+.icon-btn:hover{
+
+    background:var(--accent);
+
+    color:#fff;
+
+}
+
+.icon-btn span{
+
+    position:absolute;
+
+    top:-4px;
+    right:-4px;
+
+    width:22px;
+    height:22px;
+
+    background:var(--accent);
+
+    color:#fff;
+
+    border-radius:50%;
+
+    font-size:11px;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+}
+
+.profile img{
+
+    width:55px;
+    height:55px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:3px solid var(--accent);
+
+}
+/*=========================================
+        HERO SECTION
+=========================================*/
+
+.hero{
+
+    display:grid;
+    grid-template-columns:1.3fr .7fr;
+    align-items:center;
+    gap:40px;
+
+    background:var(--white);
+
+    padding:45px;
+
+    border-radius:22px;
+
+    box-shadow:var(--shadow);
+
+    margin-bottom:35px;
+
+}
+
+.hero-left .tag{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:10px 20px;
+
+    background:rgba(255,122,0,.12);
+
+    color:var(--accent);
+
+    border-radius:50px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    margin-bottom:20px;
+
+}
+
+.hero-left h2{
+
+    font-size:46px;
+
+    color:var(--primary);
+
+    line-height:1.2;
+
+    margin-bottom:20px;
+
+}
+
+.hero-left p{
+
+    font-size:16px;
+
+    color:var(--text);
+
+    line-height:1.8;
+
+    max-width:600px;
+
+    margin-bottom:30px;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+}
+
+.btn-primary{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    background:var(--accent);
+
+    color:#fff;
+
+    padding:16px 34px;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+}
+
+.btn-primary:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 15px 35px rgba(255,122,0,.35);
+
+}
+
+.btn-outline{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    border:2px solid var(--primary);
+
+    color:var(--primary);
+
+    padding:16px 34px;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+}
+
+.btn-outline:hover{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+.hero-right{
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.hero-right img{
+
+    width:100%;
+
+    max-width:420px;
+
+    animation:floatImage 4s ease-in-out infinite;
+
+}
+
+@keyframes floatImage{
+
+0%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-18px);
+}
+
+100%{
+transform:translateY(0);
+}
+
+}
+
+/*=========================================
+        STATISTICS
+=========================================*/
+
+.stats{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+    margin-bottom:35px;
+
+}
+
+.stat-card{
+
+    background:var(--white);
+
+    border-radius:20px;
+
+    padding:28px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.stat-card small{
+
+    display:block;
+
+    color:var(--text);
+
+    margin-bottom:8px;
+
+}
+
+.stat-card h3{
+
+    font-size:34px;
+
+    color:var(--primary);
+
+    margin-bottom:8px;
+
+}
+
+.stat-card p{
+
+    color:var(--accent);
+
+    font-size:14px;
+
+}
+
+.stat-card i{
+
+    width:72px;
+
+    height:72px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:18px;
+
+    background:rgba(15,76,92,.08);
+
+    color:var(--primary);
+
+    font-size:28px;
+
+}
+
+/*=========================================
+        DASHBOARD GRID
+=========================================*/
+
+.dashboard-grid{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    gap:25px;
+
+    margin-bottom:30px;
+
+}
+
+.dashboard-card{
+
+    background:var(--white);
+
+    padding:28px;
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+}
+
+.dashboard-card:hover{
+
+    transform:translateY(-6px);
+
+}
+
+.card-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:25px;
+
+}
+
+.card-header h3{
+
+    color:var(--primary);
+
+    font-size:24px;
+
+}
+
+.card-header a{
+
+    color:var(--accent);
+
+    font-weight:600;
+
+}
+
+/*=========================================
+        STREAMING GRAPH
+=========================================*/
+
+.chart-bars{
+
+    height:300px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-end;
+
+    gap:15px;
+
+}
+
+.bar{
+
+    flex:1;
+
+    border-radius:12px 12px 0 0;
+
+    background:linear-gradient(to top,var(--accent),var(--primary));
+
+    position:relative;
+
+    transition:.4s;
+
+}
+
+.bar:hover{
+
+    transform:scaleY(1.08);
+
+}
+
+.bar span{
+
+    position:absolute;
+
+    bottom:-34px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    font-size:13px;
+
+    color:var(--text);
+
+}
+
+/*=========================================
+        MONTHLY GOAL
+=========================================*/
+
+.goal-box h2{
+
+    font-size:56px;
+
+    color:var(--primary);
+
+    margin-bottom:10px;
+
+}
+
+.goal-box p{
+
+    color:var(--text);
+
+    margin-bottom:20px;
+
+}
+
+.progress{
+
+    width:100%;
+
+    height:12px;
+
+    background:#ececec;
+
+    border-radius:50px;
+
+    overflow:hidden;
+
+    margin-bottom:25px;
+
+}
+
+.progress-fill{
+
+    height:100%;
+
+    background:linear-gradient(90deg,var(--accent),var(--primary));
+
+    border-radius:50px;
+
+}
+
+.goal-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.goal-list li{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    color:var(--text);
+
+}
+
+.goal-list strong{
+
+    color:var(--primary);
+
+}
+
+/*=========================================
+        TOP SONGS
+=========================================*/
+
+.recent-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.recent-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:14px;
+
+    border-radius:14px;
+
+    transition:var(--transition);
+
+}
+
+.recent-item:hover{
+
+    background:#fafafa;
+
+}
+
+.recent-item img{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:14px;
+
+    object-fit:cover;
+
+}
+
+.recent-item div{
+
+    flex:1;
+
+}
+
+.recent-item h4{
+
+    color:var(--primary);
+
+    margin-bottom:6px;
+
+}
+
+.recent-item p{
+
+    color:var(--text);
+
+    font-size:14px;
+
+}
+
+.recent-item strong{
+
+    color:var(--accent);
+
+    font-size:18px;
+
+}
+
+/*=========================================
+        MUSIC PLATFORMS
+=========================================*/
+
+.platform-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.platform-item{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:16px 18px;
+
+    border-radius:14px;
+
+    background:#fafafa;
+
+    transition:var(--transition);
+
+}
+
+.platform-item:hover{
+
+    background:rgba(15,76,92,.08);
+
+}
+
+.platform-item span{
+
+    color:var(--text);
+
+    font-weight:500;
+
+}
+
+.platform-item strong{
+
+    color:var(--accent);
+
+    font-size:18px;
+
+}
+/*=========================================
+        ALBUMS TABLE
+=========================================*/
+
+.orders-table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+.orders-table thead{
+
+    background:var(--primary);
+
+}
+
+.orders-table thead th{
+
+    color:#fff;
+
+    padding:16px 18px;
+
+    text-align:left;
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+.orders-table tbody tr{
+
+    border-bottom:1px solid var(--border);
+
+    transition:var(--transition);
+
+}
+
+.orders-table tbody tr:hover{
+
+    background:#fafafa;
+
+}
+
+.orders-table tbody td{
+
+    padding:18px;
+
+    color:var(--text);
+
+    font-size:15px;
+
+}
+
+.success{
+
+    background:#dcfce7;
+
+    color:#15803d;
+
+    padding:8px 16px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+.pending{
+
+    background:#fef3c7;
+
+    color:#b45309;
+
+    padding:8px 16px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+/*=========================================
+        FAN & NOTIFICATIONS
+=========================================*/
+
+.notification-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.notification{
+
+    display:flex;
+
+    gap:18px;
+
+    align-items:flex-start;
+
+    padding:18px;
+
+    border-radius:16px;
+
+    transition:var(--transition);
+
+}
+
+.notification:hover{
+
+    background:#fafafa;
+
+}
+
+.notification i{
+
+    width:55px;
+
+    height:55px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:14px;
+
+    background:rgba(255,122,0,.12);
+
+    color:var(--accent);
+
+    font-size:22px;
+
+}
+
+.notification h4{
+
+    color:var(--primary);
+
+    margin-bottom:6px;
+
+}
+
+.notification p{
+
+    color:var(--text);
+
+    line-height:1.7;
+
+}
+
+/*=========================================
+        FOOTER
+=========================================*/
+
+.dashboard-footer{
+
+    margin-top:40px;
+
+    background:#fff;
+
+    padding:24px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+}
+
+.dashboard-footer p{
+
+    color:var(--text);
+
+    font-size:15px;
+
+}
+
+/*=========================================
+        HOVER EFFECTS
+=========================================*/
+
+.dashboard-card,
+.hero,
+.stat-card{
+
+    transition:.35s ease;
+
+}
+
+.dashboard-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.hero:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.stat-card:hover i{
+
+    background:var(--accent);
+
+    color:#fff;
+
+}
+
+/*=========================================
+        MOBILE RESPONSIVE
+=========================================*/
+
+@media(max-width:1200px){
+
+.hero{
+
+grid-template-columns:1fr;
+
+text-align:center;
+
+}
+
+.hero-left p{
+
+margin:auto auto 30px;
+
+}
+
+.hero-buttons{
+
+justify-content:center;
+
+}
+
+.hero-right{
+
+margin-top:20px;
+
+}
+
+.stats{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.dashboard-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:991px){
+
+.sidebar{
+
+left:-300px;
+
+}
+
+.sidebar.active{
+
+left:0;
+
+}
+
+.close-sidebar{
+
+display:flex;
+
+}
+
+.menu-toggle{
+
+display:flex;
+
+}
+
+.main-content{
+
+margin-left:0;
+
+width:100%;
+
+padding:20px;
+
+}
+
+.topbar{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+}
+
+.top-right{
+
+width:100%;
+
+flex-wrap:wrap;
+
+justify-content:space-between;
+
+}
+
+.search-box{
+
+width:100%;
+
+}
+
+.search-box input{
+
+width:100%;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.stats{
+
+grid-template-columns:1fr;
+
+}
+
+.hero{
+
+padding:30px 20px;
+
+}
+
+.hero-left h2{
+
+font-size:32px;
+
+}
+
+.dashboard-card{
+
+padding:22px;
+
+}
+
+.card-header{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+gap:10px;
+
+}
+
+.orders-table{
+
+display:block;
+
+overflow-x:auto;
+
+white-space:nowrap;
+
+}
+
+.top-left h1{
+
+font-size:24px;
+
+}
+
+}
+
+@media(max-width:576px){
+
+.main-content{
+
+padding:15px;
+
+}
+
+.topbar{
+
+padding:18px;
+
+}
+
+.hero-buttons{
+
+flex-direction:column;
+
+}
+
+.btn-primary,
+.btn-outline{
+
+width:100%;
+
+justify-content:center;
+
+}
+
+.profile img{
+
+width:48px;
+
+height:48px;
+
+}
+
+.sidebar{
+
+width:280px;
+
+}
+
+.chart-bars{
+
+height:220px;
+
+}
+
+.bar span{
+
+font-size:11px;
+
+}
+
+}
+
+/*=========================================
+        REVEAL ANIMATION
+=========================================*/
+
+.hidden{
+
+opacity:0;
+
+transform:translateY(40px);
+
+transition:.7s ease;
+
+}
+
+.show{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+/*=========================================
+        ACTIVE ICON BUTTON
+=========================================*/
+
+.icon-btn.active{
+
+background:var(--accent);
+
+color:#fff;
+
+}
+
+/*=========================================
+        SCROLLBAR
+=========================================*/
+
+::-webkit-scrollbar{
+
+width:8px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:var(--primary);
+
+border-radius:20px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#ececec;
+
+}
+
+/*=========================================
+        TEXT SELECTION
+=========================================*/
+
+::selection{
+
+background:var(--accent);
+
+color:#fff;
+
+}
+
+/*=========================================
+        END OF MUSIC DASHBOARD CSS
+=========================================*/
+
+/*=========================================
+        MOBILE FIX
+=========================================*/
+
+@media (max-width:768px){
+
+html,
+body{
+    width:100%;
+    overflow-x:hidden;
+}
+
+.dashboard{
+    overflow-x:hidden;
+}
+
+.main-content{
+    width:100%;
+    margin-left:0;
+    padding:15px;
+}
+
+/* Header */
+
+.topbar{
+    padding:18px;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:20px;
+}
+
+.top-left{
+    width:100%;
+    display:flex;
+    align-items:flex-start;
+    gap:15px;
+}
+
+.top-left div{
+    width:100%;
+}
+
+.top-left h1{
+    font-size:18px;
+    line-height:1.4;
+    word-break:break-word;
+}
+
+/* Email */
+
+#userEmail{
+    display:block;
+    max-width:100%;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    font-size:15px;
+}
+
+/* Header Right */
+
+.top-right{
+    width:100%;
+    display:grid;
+    grid-template-columns:1fr;
+    gap:15px;
+}
+
+/* Search */
+
+.search-box{
+    width:100%;
+}
+
+.search-box input{
+    width:100%;
+}
+
+/* Icons */
+
+.icon-btn{
+    width:48px;
+    height:48px;
+}
+
+.top-right{
+    justify-items:start;
+}
+
+.profile img{
+    width:48px;
+    height:48px;
+}
+
+/* Hero */
+
+.hero{
+    grid-template-columns:1fr;
+    padding:25px 18px;
+    text-align:center;
+}
+
+.hero-left h2{
+    font-size:34px;
+}
+
+.hero-left p{
+    font-size:16px;
+}
+
+.hero-right img{
+    width:85%;
+    margin:auto;
+}
+
+.hero-buttons{
+    flex-direction:column;
+}
+
+.btn-primary,
+.btn-outline{
+    width:100%;
+    justify-content:center;
+}
+
+/* Cards */
+
+.stats{
+    grid-template-columns:1fr;
+}
+
+.dashboard-grid{
+    grid-template-columns:1fr;
+}
+
+.dashboard-card{
+    padding:20px;
+}
+
+/* Tables */
+
+.orders-table{
+    display:block;
+    overflow-x:auto;
+    white-space:nowrap;
+}
+
+/* Images */
+
+img{
+    max-width:100%;
+}
+
+/* Sidebar */
+
+.sidebar{
+    width:280px;
+}
+
+/* Prevent overflow */
+
+*{
+    max-width:100%;
+}
+
+}
+/*=========================================
+        MOBILE HEADER FIX
+=========================================*/
+
+@media (max-width:768px){
+
+.top-right{
+    width:100%;
+}
+
+.search-box{
+    width:100%;
+    margin-bottom:18px;
+}
+
+.search-box input{
+    width:100%;
+}
+
+/* Keep notification, message and profile in one row */
+
+.top-right{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+}
+
+.top-right > .search-box{
+    flex:0 0 100%;
+}
+
+.top-right > .icon-btn,
+.top-right > .profile{
+    margin-right:18px;
+}
+
+.top-right > .profile{
+    margin-right:0;
+    margin-left:auto;
+}
+
+.icon-btn{
+    width:50px;
+    height:50px;
+    flex-shrink:0;
+}
+
+.profile img{
+    width:50px;
+    height:50px;
+    object-fit:cover;
+    border-radius:50%;
+}
+
+}
+
+
+/*=========================================
+        MOBILE TABLE FIX
+=========================================*/
+
+@media only screen and (max-width:768px){
+
+.dashboard-card{
+
+    width:100% !important;
+
+    overflow-x:auto !important;
+
+    overflow-y:hidden !important;
+
+    -webkit-overflow-scrolling:touch !important;
+
+}
+
+.orders-table{
+
+    width:100% !important;
+
+    min-width:650px !important;
+
+    border-collapse:collapse !important;
+
+}
+
+.orders-table thead th{
+
+    white-space:nowrap !important;
+
+}
+
+.orders-table tbody td{
+
+    white-space:nowrap !important;
+
+}
+
+}
+
+
+/*=========================================
+        PRODUCER STUDIO OVERVIEW
+=========================================*/
+
+.stats{
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+
+}
+
+.stat-box{
+
+    background:#f8f8f8;
+    border-radius:16px;
+    padding:25px;
+    text-align:center;
+    transition:.35s;
+
+}
+
+.stat-box:hover{
+
+    transform:translateY(-8px);
+    background:rgba(255,122,0,.08);
+
+}
+
+.stat-box i{
+
+    width:65px;
+    height:65px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:var(--accent);
+    color:#fff;
+    font-size:24px;
+    margin-bottom:18px;
+
+}
+
+.stat-box h2{
+
+    color:var(--primary);
+    font-size:34px;
+    margin-bottom:8px;
+
+}
+
+.stat-box p{
+
+    color:var(--text);
+    font-size:15px;
+
+}
+
+/*=========================================
+        STUDIO IMAGE
+=========================================*/
+
+.dashboard-card img{
+
+    width:100%;
+    height:260px;
+    object-fit:cover;
+    border-radius:16px;
+
+}
+
+/*=========================================
+        COLLABORATIONS
+=========================================*/
+
+.recent-list{
+
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+
+}
+
+.recent-item{
+
+    display:flex;
+    align-items:center;
+    gap:18px;
+    padding:15px;
+    border-radius:14px;
+    transition:.35s;
+
+}
+
+.recent-item:hover{
+
+    background:#fafafa;
+
+}
+
+.recent-item img{
+
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    object-fit:cover;
+
+}
+
+.recent-item div{
+
+    flex:1;
+
+}
+
+.recent-item h4{
+
+    color:var(--primary);
+    margin-bottom:5px;
+
+}
+
+.recent-item p{
+
+    color:var(--text);
+    font-size:14px;
+
+}
+
+.recent-item strong{
+
+    color:var(--accent);
+    font-size:17px;
+
+}
+
+/*=========================================
+        EQUIPMENT
+=========================================*/
+
+.goal-list{
+
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+
+}
+
+.goal-list li{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px;
+    background:#fafafa;
+    border-radius:12px;
+
+}
+
+.goal-list span{
+
+    color:var(--text);
+
+}
+
+.goal-list strong{
+
+    color:var(--primary);
+
+}
+
+/*=========================================
+        PLUGINS
+=========================================*/
+
+.platform-list{
+
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+
+}
+
+.platform-item{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#fafafa;
+    padding:15px 18px;
+    border-radius:14px;
+    transition:.35s;
+
+}
+
+.platform-item:hover{
+
+    background:rgba(15,76,92,.08);
+
+}
+
+.platform-item span{
+
+    color:var(--text);
+
+}
+
+.platform-item strong{
+
+    color:var(--accent);
+    font-size:17px;
+
+}
+
+/*=========================================
+        TIMELINE TABLE
+=========================================*/
+
+.orders-table{
+
+    width:100%;
+    border-collapse:collapse;
+
+}
+
+.orders-table thead{
+
+    background:var(--primary);
+
+}
+
+.orders-table thead th{
+
+    color:#fff;
+    padding:16px;
+    text-align:left;
+
+}
+
+.orders-table tbody td{
+
+    padding:18px 16px;
+    border-bottom:1px solid #ececec;
+    color:var(--text);
+
+}
+
+.orders-table tbody tr{
+
+    transition:.35s;
+
+}
+
+.orders-table tbody tr:hover{
+
+    background:#fafafa;
+
+}
+
+.success{
+
+    background:#d1fae5;
+    color:#15803d;
+    padding:8px 15px;
+    border-radius:25px;
+    font-size:13px;
+    font-weight:600;
+
+}
+
+.pending{
+
+    background:#fef3c7;
+    color:#b45309;
+    padding:8px 15px;
+    border-radius:25px;
+    font-size:13px;
+    font-weight:600;
+
+}
+
+/*=========================================
+        RESPONSIVE
+=========================================*/
+
+@media(max-width:992px){
+
+.stats{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.stats{
+
+grid-template-columns:1fr;
+
+}
+
+.dashboard-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.stat-box{
+
+padding:20px;
+
+}
+
+.dashboard-card img{
+
+height:220px;
+
+}
+
+.platform-item,
+.goal-list li{
+
+font-size:14px;
+
+}
+
+.orders-table{
+
+display:block;
+overflow-x:auto;
+white-space:nowrap;
+
+}
+
+}

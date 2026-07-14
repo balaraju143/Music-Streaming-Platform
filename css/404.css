@@ -1,0 +1,788 @@
+/*=========================================================
+                GOOGLE FONT
+=========================================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+/*=========================================================
+                ROOT
+=========================================================*/
+
+:root{
+
+    --primary:#0F4C5C;
+    --secondary:#F5F2EA;
+    --accent:#FF7A00;
+    --white:#ffffff;
+    --text:#5E6472;
+    --border:rgba(15,76,92,.12);
+
+}
+
+/*=========================================================
+                RESET
+=========================================================*/
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'Outfit',sans-serif;
+
+    background:var(--secondary);
+
+    color:var(--primary);
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow-x:hidden;
+
+    position:relative;
+        overflow-y:auto;
+
+}
+
+/*=========================================================
+                BACKGROUND
+=========================================================*/
+
+.error-bg{
+
+    position:fixed;
+
+    inset:0;
+
+    overflow:hidden;
+
+    background:
+    radial-gradient(circle at top left,
+    rgba(255,122,0,.12),
+    transparent 40%),
+
+    radial-gradient(circle at bottom right,
+    rgba(15,76,92,.08),
+    transparent 45%),
+
+    linear-gradient(135deg,#FAF8F4,#F5F2EA);
+
+    z-index:-3;
+
+}
+
+/*=========================================================
+                FLOATING GLOW
+=========================================================*/
+
+.blur{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    filter:blur(120px);
+
+    animation:blurMove 8s ease-in-out infinite;
+
+}
+
+.blur1{
+
+    width:320px;
+
+    height:320px;
+
+    background:rgba(255,122,0,.18);
+
+    top:-120px;
+
+    left:-120px;
+
+}
+
+.blur2{
+
+    width:260px;
+
+    height:260px;
+
+    background:rgba(15,76,92,.12);
+
+    right:-80px;
+
+    top:30%;
+
+    animation-delay:2s;
+
+}
+
+.blur3{
+
+    width:350px;
+
+    height:350px;
+
+    background:rgba(255,122,0,.10);
+
+    bottom:-150px;
+
+    left:40%;
+
+    animation-delay:4s;
+
+}
+
+/*=========================================================
+                MAIN
+=========================================================*/
+
+.error-section{
+
+    width:100%;
+
+    padding:40px 20px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+/*=========================================================
+                CARD
+=========================================================*/
+
+.error-card{
+
+    position:relative;
+
+    width:100%;
+
+    max-width:560px;
+
+    padding:60px 45px;
+
+    text-align:center;
+
+    border-radius:35px;
+
+    background:rgba(255,255,255,.75);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid var(--border);
+
+    box-shadow:
+    0 25px 60px rgba(15,76,92,.12);
+
+    overflow:hidden;
+
+}
+
+.error-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+
+        135deg,
+
+        rgba(255,122,0,.05),
+
+        transparent,
+
+        rgba(15,76,92,.03)
+
+    );
+
+}
+
+/*=========================================================
+                TOP ICON
+=========================================================*/
+
+.error-icon{
+
+    position:relative;
+
+    z-index:2;
+
+    width:100px;
+
+    height:100px;
+
+    margin:0 auto 35px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(255,122,0,.10);
+
+    border:2px solid rgba(255,122,0,.25);
+
+    animation:iconFloat 4s ease-in-out infinite;
+
+}
+
+.error-icon i{
+
+    font-size:42px;
+
+    color:var(--accent);
+
+}
+
+/*=========================================================
+                404
+=========================================================*/
+
+.error-card h1{
+
+    position:relative;
+
+    z-index:2;
+
+    font-size:110px;
+
+    line-height:1;
+
+    font-weight:800;
+
+    color:var(--accent);
+
+    margin-bottom:18px;
+
+}
+
+.error-card h1 span{
+
+    color:var(--primary);
+
+}
+
+/*=========================================================
+                TEXT
+=========================================================*/
+
+.error-card h2{
+
+    position:relative;
+
+    z-index:2;
+
+    font-size:40px;
+
+    color:var(--primary);
+
+    margin-bottom:20px;
+
+}
+
+.error-card p{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:430px;
+
+    margin:auto;
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    color:var(--text);
+
+    margin-bottom:45px;
+
+}
+/*=========================================================
+                FEATURES
+=========================================================*/
+
+.error-features{
+
+    position:relative;
+
+    z-index:2;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:35px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:45px;
+
+}
+
+.feature{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:14px;
+
+    transition:.4s ease;
+
+}
+
+.feature i{
+
+    width:72px;
+
+    height:72px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    background:rgba(255,122,0,.10);
+
+    border:1px solid rgba(255,122,0,.18);
+
+    color:var(--accent);
+
+    font-size:28px;
+
+    transition:.45s;
+
+}
+
+.feature span{
+
+    color:var(--primary);
+
+    font-size:16px;
+
+    font-weight:600;
+
+}
+
+.feature:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.feature:hover i{
+
+    background:var(--accent);
+
+    color:#fff;
+
+    box-shadow:0 18px 35px rgba(255,122,0,.25);
+
+    transform:rotate(10deg) scale(1.08);
+
+}
+
+/*=========================================================
+                BUTTONS
+=========================================================*/
+
+.error-buttons{
+
+    position:relative;
+
+    z-index:2;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+}
+
+.error-buttons a{
+
+    position:relative;
+
+    overflow:hidden;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    padding:18px 34px;
+
+    border-radius:50px;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    text-decoration:none;
+
+    transition:.45s ease;
+
+}
+
+.home-btn{
+
+    background:var(--accent);
+
+    color:#fff;
+
+    box-shadow:0 18px 35px rgba(255,122,0,.25);
+
+}
+
+.home-btn:hover{
+
+    transform:translateY(-8px);
+
+    background:#e96f00;
+
+}
+
+.contact-btn{
+
+    background:#fff;
+
+    border:2px solid var(--primary);
+
+    color:var(--primary);
+
+}
+
+.contact-btn:hover{
+
+    background:var(--primary);
+
+    color:#fff;
+
+    transform:translateY(-8px);
+
+}
+
+/* Shine Effect */
+
+.error-buttons a::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:-120%;
+
+    top:0;
+
+    width:60%;
+
+    height:100%;
+
+    background:linear-gradient(
+
+        120deg,
+
+        transparent,
+
+        rgba(255,255,255,.55),
+
+        transparent
+
+    );
+
+    transform:skewX(-25deg);
+
+    transition:1s;
+
+}
+
+.error-buttons a:hover::before{
+
+    left:180%;
+
+}
+
+/*=========================================================
+                FLOATING ICONS
+=========================================================*/
+
+.floating-icons{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    z-index:-1;
+
+}
+
+.floating-icons i{
+
+    position:absolute;
+
+    color:rgba(15,76,92,.08);
+
+    animation:floatIcons 8s ease-in-out infinite;
+
+}
+
+.icon1{
+
+    left:8%;
+
+    top:15%;
+
+    font-size:42px;
+
+}
+
+.icon2{
+
+    right:10%;
+
+    top:22%;
+
+    font-size:56px;
+
+    animation-delay:2s;
+
+}
+
+.icon3{
+
+    left:10%;
+
+    bottom:12%;
+
+    font-size:48px;
+
+    animation-delay:4s;
+
+}
+
+.icon4{
+
+    right:10%;
+
+    bottom:18%;
+
+    font-size:46px;
+
+    animation-delay:6s;
+
+}
+
+/*=========================================================
+                ANIMATIONS
+=========================================================*/
+
+@keyframes iconFloat{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+}
+
+@keyframes blurMove{
+
+    0%,100%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.15);
+
+    }
+
+}
+
+@keyframes floatIcons{
+
+    0%,100%{
+
+        transform:translateY(0) rotate(0);
+
+        opacity:.35;
+
+    }
+
+    50%{
+
+        transform:translateY(-25px) rotate(12deg);
+
+        opacity:.9;
+
+    }
+
+}
+
+/*=========================================================
+                RESPONSIVE
+=========================================================*/
+
+@media(max-width:768px){
+
+body{
+
+    overflow:auto;
+
+    padding:25px;
+
+}
+
+.error-card{
+
+    max-width:340px;
+
+    width:100%;
+
+    padding:28px 22px;
+
+    border-radius:22px;
+
+}
+  .error-icon{
+
+    width:70px;
+
+    height:70px;
+
+    margin:0 auto 20px;
+
+}
+.error-icon i{
+
+    font-size:28px;
+
+}
+.error-card h1{
+
+    font-size:72px;
+
+    margin-bottom:10px;
+
+    line-height:1;
+
+}
+
+.error-card h2{
+
+    font-size:26px;
+
+    margin-bottom:12px;
+
+}
+
+.error-card p{
+
+    font-size:15px;
+
+    line-height:1.7;
+
+    margin-bottom:25px;
+
+}
+
+.error-features{
+
+    gap:15px;
+
+    margin-bottom:25px;
+
+}
+
+.feature i{
+
+    width:50px;
+
+    height:50px;
+
+    font-size:18px;
+
+}
+
+.feature span{
+
+    font-size:13px;
+
+}
+
+.error-buttons{
+
+    flex-direction:column;
+    gap:12px;
+
+}
+
+.error-buttons a{
+
+    width:100%;
+     padding:14px 20px;
+
+    font-size:15px;
+
+
+}
+
+.floating-icons{
+
+    display:none;
+
+}
+
+}

@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Login | MelodyX Studio</title>
+
+    <!-- Google Font -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+  
+
+    <link rel="stylesheet"
+          href="css/login.css">
+
+</head>
+
+<body>
+
+<!--====================================
+            BACKGROUND SHAPES
+=====================================-->
+
+<div class="bg-circle circle-one"></div>
+
+<div class="bg-circle circle-two"></div>
+
+<div class="bg-circle circle-three"></div>
+
+<!--====================================
+            LOGIN
+=====================================-->
+
+<section class="login-section">
+
+<div class="login-wrapper">
+
+<!--====================================
+            LEFT PANEL
+=====================================-->
+
+<div class="login-left">
+
+<img src="images/vocal-studio (1).webp"
+     alt="Luxury Studio">
+
+<div class="left-overlay"></div>
+
+<div class="left-content">
+
+<span class="hero-tag">
+
+<i class="fa-solid fa-record-vinyl"></i>
+
+Premium Recording Studio
+
+</span>
+
+<h1>
+
+Create Music
+
+<span>Without Limits.</span>
+
+</h1>
+
+<p>
+
+Experience world-class recording studios,
+award-winning producers and premium
+equipment that transforms every idea
+into unforgettable music.
+
+</p>
+
+<div class="left-stats">
+
+<div class="stat-box">
+
+<h3>
+
+15+
+
+</h3>
+
+<span>
+
+Years Experience
+
+</span>
+
+</div>
+
+<div class="stat-box">
+
+<h3>
+
+850+
+
+</h3>
+
+<span>
+
+Albums Produced
+
+</span>
+
+</div>
+
+<div class="stat-box">
+
+<h3>
+
+500+
+
+</h3>
+
+<span>
+
+Happy Artists
+
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!--====================================
+            RIGHT PANEL
+=====================================-->
+
+<div class="login-right">
+
+<a href="index.html"
+   class="back-home">
+
+<i class="fa-solid fa-arrow-left"></i>
+
+Back To Home
+
+</a>
+
+<div class="login-logo">
+
+<img src="images/stackly-orange.webp"
+         class="logo-image"
+     alt="Stackly Logo">
+
+</div>
+
+<h2>
+
+Welcome Back
+
+</h2>
+
+<p class="login-subtitle">
+
+Login to continue your MelodyX Studio dashboard.
+
+</p>
+
+<!--====================================
+            ROLE SELECTOR
+=====================================-->
+
+<div class="role-selector">
+
+<div class="role-card active"
+
+     data-role="artist">
+
+<i class="fa-solid fa-microphone-lines"></i>
+
+<h4>
+
+Artist
+
+</h4>
+
+<span>
+
+Record Songs
+
+</span>
+
+</div>
+
+<div class="role-card"
+
+     data-role="producer">
+
+<i class="fa-solid fa-sliders"></i>
+
+<h4>
+
+Producer
+
+</h4>
+
+<span>
+
+Manage Studio
+
+</span>
+
+</div>
+
+</div>
+
+<!--====================================
+            LOGIN FORM
+=====================================-->
+
+<form id="loginForm"
+      novalidate>
+
+<div class="input-group">
+
+<i class="fa-solid fa-envelope"></i>
+
+<input
+
+type="email"
+
+id="email"
+
+placeholder="Email Address">
+
+<small
+
+class="error"
+
+id="emailError">
+
+</small>
+
+</div>
+
+<div class="input-group password-group">
+
+<i class="fa-solid fa-lock"></i>
+
+<input
+
+type="password"
+
+id="password"
+
+placeholder="Password">
+
+<button
+
+type="button"
+
+id="togglePassword"
+
+class="toggle-password">
+
+<i class="fa-solid fa-eye"></i>
+
+</button>
+
+<small
+
+class="error"
+
+id="passwordError">
+
+</small>
+
+</div>
+<!--====================================
+        FORM OPTIONS
+=====================================-->
+
+<div class="form-options">
+
+<label class="remember-me">
+
+<input type="checkbox">
+
+<span>
+
+Remember Me
+
+</span>
+
+</label>
+
+<a href="forgot-password.html"
+
+class="forgot-password">
+
+Forgot Password?
+
+</a>
+
+</div>
+
+<!--====================================
+        LOGIN BUTTON
+=====================================-->
+
+<input
+
+type="hidden"
+
+id="selectedRole"
+
+value="artist">
+
+<button
+
+type="submit"
+
+class="login-btn">
+
+Login
+
+<i class="fa-solid fa-arrow-right"></i>
+
+</button>
+
+<!--====================================
+        DIVIDER
+=====================================-->
+
+<div class="divider">
+
+<span>
+
+OR
+
+</span>
+
+</div>
+
+<!--====================================
+        SOCIAL LOGIN
+=====================================-->
+
+<div class="social-login">
+
+<a href="404.html">
+
+<i class="fa-brands fa-google"></i>
+
+</a>
+
+<a href="404.html">
+
+<i class="fa-brands fa-apple"></i>
+
+</a>
+
+<a href="404.html">
+
+<i class="fa-brands fa-spotify"></i>
+
+</a>
+
+</div>
+
+<!--====================================
+        REGISTER
+=====================================-->
+
+<div class="register-text">
+
+Don't have an account?
+
+<a href="signup.html">
+
+Create Account
+
+</a>
+
+</div>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+<!--====================================
+        FLOATING MUSIC ICONS
+=====================================-->
+
+<div class="floating-icons">
+
+<i class="fa-solid fa-music note1"></i>
+
+<i class="fa-solid fa-record-vinyl note2"></i>
+
+<i class="fa-solid fa-headphones note3"></i>
+
+<i class="fa-solid fa-wave-square note4"></i>
+
+</div>
+
+<!--====================================
+        JAVASCRIPT
+=====================================-->
+
+<script src="js/login.js"></script>
+
+</body>
+
+</html>

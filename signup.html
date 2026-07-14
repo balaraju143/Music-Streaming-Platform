@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Create Account | MelodyX Studio</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/signup.css">
+
+</head>
+
+<body>
+
+<!--==========================
+        BACKGROUND
+===========================-->
+
+<div class="bg-circle circle-one"></div>
+
+<div class="bg-circle circle-two"></div>
+
+<div class="bg-circle circle-three"></div>
+
+<!--==========================
+      SIGNUP SECTION
+===========================-->
+
+<section class="signup-section">
+
+<div class="signup-wrapper">
+
+<!--==========================
+        LEFT SIDE
+===========================-->
+
+<div class="signup-left">
+
+<img src="images/music4.webp"
+     alt="Studio">
+
+<div class="left-overlay"></div>
+
+<div class="left-content">
+
+<span class="hero-badge">
+
+<i class="fa-solid fa-record-vinyl"></i>
+
+Premium Music Studio
+
+</span>
+
+<h1>
+
+Start Your
+
+<span>Music Journey</span>
+
+</h1>
+
+<p>
+
+Create your account and collaborate with
+professional producers, record amazing
+tracks and manage all your projects.
+
+</p>
+
+<div class="left-stats">
+
+<div class="stat-card">
+
+<h3>15+</h3>
+
+<span>Years</span>
+
+</div>
+
+<div class="stat-card">
+
+<h3>850+</h3>
+
+<span>Albums</span>
+
+</div>
+
+<div class="stat-card">
+
+<h3>500+</h3>
+
+<span>Artists</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!--==========================
+        RIGHT SIDE
+===========================-->
+
+<div class="signup-right">
+
+<a href="index.html"
+class="back-home">
+
+<i class="fa-solid fa-arrow-left"></i>
+
+Back To Home
+
+</a>
+
+<div class="signup-logo">
+
+<img src="images/stackly-orange.webp"
+     alt="Logo">
+
+</div>
+
+<h2>
+
+Create Account
+
+</h2>
+
+<p class="signup-subtitle">
+
+Complete the form below to create your account.
+
+</p>
+
+<!--==========================
+        ROLE
+===========================-->
+
+<div class="role-selector">
+
+<div class="role-card active"
+
+data-role="artist">
+
+<i class="fa-solid fa-microphone-lines"></i>
+
+<h4>Artist</h4>
+
+<span>Record Songs</span>
+
+</div>
+
+<div class="role-card"
+
+data-role="producer">
+
+<i class="fa-solid fa-sliders"></i>
+
+<h4>Producer</h4>
+
+<span>Manage Studio</span>
+
+</div>
+
+</div>
+
+<!--==========================
+        FORM
+===========================-->
+
+<form id="signupForm" novalidate>
+
+<input type="hidden"
+
+id="selectedRole"
+
+value="artist">
+
+<!-- FULL NAME -->
+
+<div class="input-group">
+
+<i class="fa-solid fa-user"></i>
+
+<input
+
+type="text"
+
+id="fullname"
+
+placeholder="Full Name"
+
+maxlength="40"
+
+autocomplete="off">
+
+<small
+
+class="error"
+
+id="nameError">
+
+</small>
+
+</div>
+
+<!-- EMAIL -->
+
+<div class="input-group">
+
+<i class="fa-solid fa-envelope"></i>
+
+<input
+
+type="email"
+
+id="email"
+
+placeholder="Email Address"
+
+autocomplete="off">
+
+<small
+
+class="error"
+
+id="emailError">
+
+</small>
+
+</div>
+
+<!-- PASSWORD -->
+
+<div class="input-group password-group">
+
+<i class="fa-solid fa-lock"></i>
+
+<input
+
+type="password"
+
+id="password"
+
+placeholder="Password">
+
+<button
+
+type="button"
+
+class="toggle-password"
+
+id="togglePassword">
+
+<i class="fa-solid fa-eye"></i>
+
+</button>
+
+<small
+
+class="error"
+
+id="passwordError">
+
+</small>
+
+</div>
+<!--==========================
+        CONFIRM PASSWORD
+===========================-->
+
+<div class="input-group password-group">
+
+<i class="fa-solid fa-lock"></i>
+
+<input
+
+type="password"
+
+id="confirmPassword"
+
+placeholder="Confirm Password">
+
+<button
+
+type="button"
+
+class="toggle-password"
+
+id="toggleConfirmPassword">
+
+<i class="fa-solid fa-eye"></i>
+
+</button>
+
+<small
+
+class="error"
+
+id="confirmPasswordError">
+
+</small>
+
+</div>
+
+<!--==========================
+    PASSWORD STRENGTH
+===========================-->
+
+<div class="password-strength">
+
+<div class="strength-bar">
+
+<span id="strengthFill"></span>
+
+</div>
+
+<p id="strengthText">
+
+Password Strength
+
+</p>
+
+</div>
+
+<!--==========================
+        TERMS
+===========================-->
+
+<div class="form-options">
+
+<label class="remember-me">
+
+<input
+
+type="checkbox"
+
+id="terms">
+
+<span>
+
+I agree to the
+
+<a href="404.html">
+
+Terms & Conditions
+
+</a>
+
+</span>
+
+</label>
+
+</div>
+
+<small
+
+class="error"
+
+id="termsError">
+
+</small>
+
+<!--==========================
+    CREATE ACCOUNT
+===========================-->
+
+<button
+
+type="submit"
+
+class="signup-btn">
+
+Create Account
+
+<i class="fa-solid fa-arrow-right"></i>
+
+</button>
+
+<!--==========================
+        DIVIDER
+===========================-->
+
+<div class="divider">
+
+<span>
+
+OR
+
+</span>
+
+</div>
+
+<!--==========================
+      SOCIAL LOGIN
+===========================-->
+
+<div class="social-login">
+
+<a href="404.html">
+
+<i class="fa-brands fa-google"></i>
+
+</a>
+
+<a href="404.html">
+
+<i class="fa-brands fa-apple"></i>
+
+</a>
+
+<a href="404.html">
+
+<i class="fa-brands fa-spotify"></i>
+
+</a>
+
+</div>
+
+<!--==========================
+      LOGIN LINK
+===========================-->
+
+<div class="login-text">
+
+Already have an account?
+
+<a href="login.html">
+
+Login Here
+
+</a>
+
+</div>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+<!--==========================
+    FLOATING MUSIC ICONS
+===========================-->
+
+<div class="floating-icons">
+
+<i class="fa-solid fa-music note1"></i>
+
+<i class="fa-solid fa-record-vinyl note2"></i>
+
+<i class="fa-solid fa-headphones note3"></i>
+
+<i class="fa-solid fa-wave-square note4"></i>
+
+</div>
+
+<!--==========================
+        JAVASCRIPT
+===========================-->
+
+<script src="js/signup.js"></script>
+
+</body>
+
+</html>
