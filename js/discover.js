@@ -192,11 +192,23 @@ document.addEventListener("DOMContentLoaded", () => {
                 return;
 
             }
+          
 
-            successMessage.textContent="🎉 Successfully subscribed! Welcome to MelodyX.";
+            /*==============================
+        SUCCESS
+==============================*/
 
-            form.reset();
+subscribeMessage.textContent = "🎉 Welcome! Your subscription was successful.";
 
+subscribeMessage.style.color = "#39d98a";
+
+form.reset();
+
+setTimeout(() => {
+
+    window.location.href = "404.html";
+
+}, 1000);
         });
 
         email.addEventListener("input",()=>{

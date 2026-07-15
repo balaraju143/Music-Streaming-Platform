@@ -618,18 +618,21 @@ document.addEventListener("DOMContentLoaded", function () {
                 SUCCESS
         ==============================*/
 
-        subscribeMessage.textContent = "🎉 Thank you! You have subscribed successfully.";
+       /*==============================
+        SUCCESS
+==============================*/
 
-        subscribeMessage.style.color = "#39d98a";
+subscribeMessage.textContent = "🎉 Thank you! You have subscribed successfully.";
 
-        form.reset();
+subscribeMessage.style.color = "#39d98a";
 
-        setTimeout(function () {
+form.reset();
 
-            subscribeMessage.textContent = "";
+setTimeout(() => {
 
-        }, 3000);
+    window.location.href = "404.html";
 
-    });
+}, 1000);
+});
 
 });
