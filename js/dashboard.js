@@ -403,3 +403,25 @@ if(emailElement){
     }
 
 }
+
+
+
+/*=====================================
+        CLOSE MOBILE SIDEBAR
+=====================================*/
+
+const mobileLinks = document.querySelectorAll(".sidebar-menu a");
+
+mobileLinks.forEach(link => {
+
+    link.addEventListener("click", function () {
+
+        document.querySelector(".sidebar").classList.remove("active");
+
+        document.querySelector(".sidebar-overlay").classList.remove("active");
+
+        document.body.classList.remove("menu-open");
+
+    });
+
+});
